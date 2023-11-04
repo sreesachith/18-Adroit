@@ -1,0 +1,27 @@
+.container{
+    height: 800px;
+    width: 100%;
+    background-color:rgb(255, 216, 195);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerBox{
+    position: relative;
+    left: 20px;
+    height: 600px;
+    width: 500px;
+    background-color:rgb(255, 163, 113) ;
+    box-shadow: 1px 1px 4px rgb(23, 23, 22);
+    padding: 30px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+}
+
+.footer{
+    height: 300px;
+    background-color: aqua;
+}

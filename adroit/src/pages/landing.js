@@ -1,22 +1,24 @@
 import React from "react";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Desktop ()  {
+  const navigate = useNavigate()
   return (
     <div className="desktop">
       <div className="div">
         <div className="overlap-group">
-          <button className="button-open-links" type="button" >
+          <button className="button-open-links" onClick={() => navigate('home')} >
           <img className="img" alt="Button open links" src="home.jpeg" />
           </button>
           <button className="button-open-links" type="button" >
           <img className="img" alt="Button open links" src="contact.jpeg" />
           </button>
-          <button className="button-open-links" type="button" >
+          <button className="button-open-links" type="button" onClick={() => navigate('about')} >
           <img className="img" alt="Button open links" src="about.jpeg" />
           </button>
 
-          <button className="button-open-links_1" type="button" >
+          <button className="button-open-links_1" type="button" onClick={() => navigate('Signup')} >
             Sign up
           </button>
           <button className="button-open-links_1" type="button" >
