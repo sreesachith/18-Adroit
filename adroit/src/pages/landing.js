@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Desktop ()  {
+  const section = useRef();
+  const scrollHandler = (elmRef) => {
+    console.log(elmRef)
+    window.scrollTo({top:elmRef.current.offsetTop,behavior:"smooth"});
+  }
   const navigate = useNavigate()
   return (
     <div className="desktop">
@@ -11,7 +16,7 @@ export default function Desktop ()  {
           <button className="button-open-links" onClick={() => navigate('home')} >
           <img className="img" alt="Button open links" src="home.jpeg" />
           </button>
-          <button className="button-open-links" type="button" >
+          <button className="button-open-links" type="button" onClick={() => scrollHandler(section)}>
           <img className="img" alt="Button open links" src="contact.jpeg" />
           </button>
           <button className="button-open-links" type="button" onClick={() => navigate('about')} >
@@ -37,9 +42,16 @@ export default function Desktop ()  {
               intricately woven textiles to meticulously carved wooden treasures, our store is a treasure trove of
               exquisite craftsmanship.
             </span>
+            <div  className="abc">
+            <img src="footer.jpeg" alt="footer"/>
+          </div>
+          <div ref={section}></div>
           </p>
+          
           <div className="text-wrapper-2">WELCOME</div>
+          
         </div>
+        
       </div>
     </div>
   );
